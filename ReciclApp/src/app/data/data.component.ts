@@ -12,7 +12,10 @@ import { MyHttpPostService } from "./http-post.service";
 export class DataComponent implements OnInit {
 
     coins : string 
-    
+    correct :string
+    idle : string
+    wrong :string 
+    total : string
 
     constructor(private myPostService: MyHttpPostService) {
         // Use the component constructor to inject providers.
@@ -35,9 +38,13 @@ export class DataComponent implements OnInit {
     
     private makePostRequest(id) {
         this.myPostService
-            .postData({ "id": id})
+            .postData({ "user_id": id})
             .subscribe(res => {
-                this.coins = res.toString();
+                console.log(res);
+                this.correct = res["correct"];
+                this.idle = res["idle"];
+                this.wrong = res["wrong"];
+                this.total = res["total"];
         });
     }
 
