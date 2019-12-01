@@ -1,0 +1,28 @@
+<ActionBar>
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="Escaneja QR"></Label>
+</ActionBar>
+
+
+<StackLayout class= "page__content" rows="auto">
+    <Label row="0" class="h1 text-center" margin="50px" text="Escaneja el QR de la bossa"></Label>
+    <Image row="1" height="30%" margin-top="50px" src="~/app/images/qrcode.png" stretch="aspectFit" ></Image>
+    <Label row="2" class="body text-center" text="" textWrap="true"></Label>
+    <Button row="3" width="30%" class="btn btn-primary btn-rounded-sm" text="Escaneja" (tap)="doScanWithBackCamera()"></Button>
+    <Label  row="4" margin="50px" class="body text-center" text="Si és el primer cop que escanejes un codi és molt probable que hagis de donar permís a l'aplicació per utilitzar la càmara." textWrap="true"></Label>
+</StackLayout>
+
+
+

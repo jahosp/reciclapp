@@ -1,0 +1,32 @@
+<ActionBar>
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="Les meves dades"></Label>
+</ActionBar>
+
+<script>
+
+</script>
+
+<StackLayout class= "page__content" rows="auto">
+    <Label row="0" class="h1 text-center" margin="50px" textWrap="true" text="La teva cartera"></Label>
+    <Label row="1" class="h2" margin="50px" text="Total: {{coins}} monedes digitals"></Label>
+
+    <Label row="2" class="h1 text-center" margin="50px" text="Les teves contribucions"></Label>
+    <Label row="2" class="h2" margin="50px" text="Bosses escanejades: "></Label>
+    <Label row="2" class="h2" margin="50px" text="Bosses pendents de validar: "></Label>
+    <Label row="2" class="h2" margin="50px" text="Bosses validades: "></Label>
+    <Label row="2" class="h2" margin="50px" text="Bosses no validades: "></Label>
+
+</StackLayout>

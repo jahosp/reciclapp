@@ -1,0 +1,24 @@
+<ActionBar>
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="Inici"></Label>
+</ActionBar>
+
+<StackLayout class="page__content" rows="auto" >
+    <Label row="0" class="h1 text-center" margin="50px" text="Benvingut a ReciclApp!"></Label>
+    <Image row="1" height="30%" src="~/app/images/recycle.png"  ></Image>
+    <Label row="2" class="h3 text-center" margin="50px" text="Mitjançant aquesta eina pots ajudar a reciclar millor i obtenir recompenses!" textWrap="true"></Label>
+    <Label row="3" class="h3 text-center"  margin="50px" textWrap="true" text="Si escanejes els codis QR que trobaràs a les bosses i aquestes porten el contingut correcte, validarem els teus codis i rebràs una moneda digital que pots utilitzar en comerços. Pots trobar més informació a la pàgina web de l'Agència de Residus de Catalunya."></Label>
+    <a ng-href="http://residus.gencat.cat/">residus.gencat.cat</a>
+</StackLayout>
