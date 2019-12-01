@@ -40,7 +40,6 @@ export class DataComponent implements OnInit {
         this.myPostService
             .postData({ "user_id": id})
             .subscribe(res => {
-                console.log(res);
                 this.correct = res["correct"];
                 this.idle = res["idle"];
                 this.wrong = res["wrong"];
