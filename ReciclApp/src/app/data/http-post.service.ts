@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 )
 export class MyHttpPostService {
     private blockchainUrl = "http://192.168.1.199:2002/veureMoney";
-    private serverUrl = "";
+    private serverUrl = "http://192.168.1.131:5000/get_bags";
 
     constructor(private http: HttpClient) { }
 

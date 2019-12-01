@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable()
 export class MyHttpPostService {
-    private serverUrl = "http://192.168.1.130:5000/register_qr";
+    private serverUrl = "http://192.168.1.131:5000/register_qr";
 
     constructor(private http: HttpClient) { }
 

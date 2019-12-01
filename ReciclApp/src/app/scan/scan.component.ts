@@ -67,7 +67,7 @@ export class ScanComponent implements OnInit {
         }
       }).then((result) => {
         try {
-          this.submit(1,result.text)
+          this.submit( "5de345ea004e6f293f761c42" ,result.text)
         } catch(error) {console.log(error);}
         
       }) 
